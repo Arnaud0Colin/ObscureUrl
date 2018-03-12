@@ -25,8 +25,7 @@ namespace SecurityExtention
 
         public static unsafe String ToBase64String(byte[] inArray)
         {
-            int stringLength = ToBase64_CalculateAndValidateOutputLength(inArray.Length, false);
-
+            int stringLength = ToBase64_CalculateAndValidateOutputLength(inArray.Length, false); 
             char[] DecSource = new char[stringLength];
 
             fixed (char* outChars = DecSource)
@@ -34,7 +33,7 @@ namespace SecurityExtention
                 fixed (byte* inData = inArray)
                 {
                     int j = ConvertToBase64Array(outChars, inData, 0, inArray.Length, false);
-                    return new string(outChars);
+                    return new string(outChars, 0, stringLength);
                 }
             }
         }
@@ -121,6 +120,7 @@ namespace SecurityExtention
                         outChars[j + 3] = base64[64]; //Pad
                         j += 4;
                         break;
+                 
                 }
             }
 

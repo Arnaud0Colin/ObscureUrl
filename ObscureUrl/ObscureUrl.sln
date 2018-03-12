@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityExtention", "ObscureUrl\SecurityExtention.csproj", "{D3F35D75-8962-446C-A400-DC5E73499807}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityExtention.Test", "SecurityExtention.Test\SecurityExtention.Test.csproj", "{FEE2F433-0A04-4F1D-9BEC-8AE377A19927}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{D3F35D75-8962-446C-A400-DC5E73499807}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3F35D75-8962-446C-A400-DC5E73499807}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3F35D75-8962-446C-A400-DC5E73499807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE2F433-0A04-4F1D-9BEC-8AE377A19927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE2F433-0A04-4F1D-9BEC-8AE377A19927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE2F433-0A04-4F1D-9BEC-8AE377A19927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE2F433-0A04-4F1D-9BEC-8AE377A19927}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {561FDDBA-5EC5-4D0C-9E8B-7BBA2E01C52B}
 	EndGlobalSection
 EndGlobal
