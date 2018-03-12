@@ -1,5 +1,6 @@
 # ObscureUrl
 
+## Sample
 ```
 // Encode Key
 byte[] _XorKey = { 226, 245, 107, 211, 54, 158, 173, 18, 171, 24, 234, 236, 53, 154, 136, 24, 70, 35, 178, 102, 76, 9,
@@ -25,3 +26,13 @@ string Chaine = "Good Morning";
   // Clear == "Good Morning"
 
 ```
+
+
+## Sample for a Url
+```
+    // For Url like /tree/master?readme=1
+    string Chaine = "readme=1";
+    var ObsChaine = new SecurityExtention.Obscure(_XorKey).Encoder(Chaine, SecurityExtention.ObscureStringMode.ASCII);
+    //  Get url like /tree/master?DJ4rVn066erUIpM,
+```            
+            
