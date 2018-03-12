@@ -58,8 +58,8 @@ string Chaine = "Good Morning";
  //  Get url like /tree/master?DJ4rVn066erUIpM,
 ```            
   * Obscure(_XorKey)            => "DJ4rVn066erUIpM,"
-  * Obscure(_XorKey){Shift=2}   => "OCF2FV3zivK6lmc,"   /* AT 2:56 mp */
-  * Obscure(_XorKey){Shift=2}   => "OYiz81QoVAuqLAo,"   /* AT 2:57 mp */
+  * Obscure(_XorKey){Shift=2}   => "OCF2FV3zivK6lmc,"   /* AT 2:56 pm */
+  * Obscure(_XorKey){Shift=2}   => "OYiz81QoVAuqLAo,"   /* AT 2:57 pm */
   * Obscure(_XorKey, 1, false ) => "9QyeK1Z9Ounq1CKT"
   * Obscure(_XorKey, 5, false ) => "9WvTNp4MnitWfTrp6tQikw,,"
   * Obscure(_XorKey, 0, true  ) => "DJ4rVn066erU1Xdnr3CHLCqwIQ,,"
