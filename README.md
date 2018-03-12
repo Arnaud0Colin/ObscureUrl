@@ -1,5 +1,23 @@
 # ObscureUrl
 
+## Option 
+
+   /* Type of Shift on Encode Key for example Day the same string get same encoding for today */ 
+   /* with Hour => encoded string get a different result every hour */ 
+   Shift
+      0 = Millisecond
+      1 = Second
+      2 = Minute
+      3 = Hour
+      5 = Day
+      6 = Month
+      7 = Year
+default = Day  
+
+  public Obscure(/* Encode Key */ byte[] Key)
+  public Obscure(/* Encode Key */ byte[] Key, /* Add TimeStamp */ bool TimeStamp = false) 
+  public Obscure(/* Encode Key */ byte[] Key, /* Add x Dump Byte */ int Complement = 0, /* Add TimeStamp */ bool TimeStamp = false) 
+
 ## Sample
 ```
 // Encode Key
@@ -35,4 +53,13 @@ string Chaine = "Good Morning";
     var ObsChaine = new SecurityExtention.Obscure(_XorKey).Encoder(Chaine, SecurityExtention.ObscureStringMode.ASCII);
     //  Get url like /tree/master?DJ4rVn066erUIpM,
 ```            
-            
+   Obscure(_XorKey)            => "DJ4rVn066erUIpM,"
+   Obscure(_XorKey){Shift=2}   => "OCF2FV3zivK6lmc,"   /* AT 2:56 mp */
+   Obscure(_XorKey){Shift=2}   => "OYiz81QoVAuqLAo,"   /* AT 2:57 mp */
+   Obscure(_XorKey, 1, false ) => "9QyeK1Z9Ounq1CKT"
+   Obscure(_XorKey, 5, false ) => "9WvTNp4MnitWfTrp6tQikw,,"
+   Obscure(_XorKey, 0, true  ) => "DJ4rVn066erU1Xdnr3CHLCqwIQ,,"
+   
+   All Can be decrypt and return "readme=1"
+   
+   
