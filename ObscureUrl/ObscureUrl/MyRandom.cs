@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ObscureUrl
+namespace SecurityExtention
 {
     public class MyRandom
     {
